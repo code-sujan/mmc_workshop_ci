@@ -2,7 +2,10 @@
 
 <?= $this->section('content') ?>
 <div class="container-fluid">
-    <a href="/faculty/new" class="float-end mb-2 btn btn-primary btn-sm">New</a>
+    <a href="/faculty/new" class="float-end mb-2 btn btn-primary btn-sm">
+        <i class="fa fa-plus-square"></i>
+        <span>New</span>
+    </a>
     <table class="table table-bordered table-striped">
         <thead>
         <tr>

@@ -38,9 +38,15 @@
 <!--        gtag('config', 'UA-118965717-5');-->
 <!--    </script>-->
     <link href="<?= base_url('vendors/@coreui/chartjs/css/coreui-chartjs.css')?>" rel="stylesheet">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+          integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
+
+
 <?= $this->include('partials/sidebar_partial')?>
+
+
 <div class="wrapper d-flex flex-column min-vh-100 bg-light">
     <header class="header header-sticky mb-4">
         <div class="container-fluid">
@@ -84,59 +90,13 @@
                     </a>
                     <div class="dropdown-menu dropdown-menu-end pt-0">
                         <div class="dropdown-header bg-light py-2">
-                            <div class="fw-semibold">Account</div>
+                            <a class="dropdown-item" href="/user/logout">
+                                <svg class="icon me-2">
+                                    <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-account-logout"></use>
+                                </svg>
+                                Logout</a>
                         </div>
-                        <a class="dropdown-item" href="#">
-                            <svg class="icon me-2">
-                                <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-bell"></use>
-                            </svg>
-                            Updates<span class="badge badge-sm bg-info ms-2">42</span></a><a class="dropdown-item"
-                                                                                             href="#">
-                            <svg class="icon me-2">
-                                <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-envelope-open"></use>
-                            </svg>
-                            Messages<span class="badge badge-sm bg-success ms-2">42</span></a><a class="dropdown-item"
-                                                                                                 href="#">
-                            <svg class="icon me-2">
-                                <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-task"></use>
-                            </svg>
-                            Tasks<span class="badge badge-sm bg-danger ms-2">42</span></a><a class="dropdown-item"
-                                                                                             href="#">
-                            <svg class="icon me-2">
-                                <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-comment-square"></use>
-                            </svg>
-                            Comments<span class="badge badge-sm bg-warning ms-2">42</span></a>
-                        <div class="dropdown-header bg-light py-2">
-                            <div class="fw-semibold">Settings</div>
-                        </div>
-                        <a class="dropdown-item" href="#">
-                            <svg class="icon me-2">
-                                <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-user"></use>
-                            </svg>
-                            Profile</a><a class="dropdown-item" href="#">
-                            <svg class="icon me-2">
-                                <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-settings"></use>
-                            </svg>
-                            Settings</a><a class="dropdown-item" href="#">
-                            <svg class="icon me-2">
-                                <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-credit-card"></use>
-                            </svg>
-                            Payments<span class="badge badge-sm bg-secondary ms-2">42</span></a><a class="dropdown-item"
-                                                                                                   href="#">
-                            <svg class="icon me-2">
-                                <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-file"></use>
-                            </svg>
-                            Projects<span class="badge badge-sm bg-primary ms-2">42</span></a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">
-                            <svg class="icon me-2">
-                                <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-lock-locked"></use>
-                            </svg>
-                            Lock Account</a><a class="dropdown-item" href="#">
-                            <svg class="icon me-2">
-                                <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-account-logout"></use>
-                            </svg>
-                            Logout</a>
+
                     </div>
                 </li>
             </ul>
@@ -154,6 +114,7 @@
         </div>
     </header>
     <div class="body flex-grow-1 px-3">
+
         <?= $this->renderSection('content') ?>
 
         <?= $this->include('partials/notification_partial');?>

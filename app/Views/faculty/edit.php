@@ -25,4 +25,14 @@
         </div>
     </div>
 </div>
+<script>
+
+</script>
+
+<?= $this->endSection();?>
+
+<?= $this->section('script')?>
+<script>
+
+</script>
 <?= $this->endSection();?>

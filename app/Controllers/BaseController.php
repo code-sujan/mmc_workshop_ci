@@ -65,8 +65,8 @@ abstract class BaseController extends Controller
         $urlArr = $request->getUri()->getSegments();
         $controller = $urlArr[0] ?? 'home';
         $action = (isset($urlArr[1]) ? $urlArr[1] : 'index');
-//        if(!$this->loginService->isLoggedIn() && $controller != 'login'){
-//            $response->redirect('login');
-//        }
+        if(!$this->loginService->isLoggedIn() && $controller != 'user' && $action != 'login'){
+            $response->redirect('user/login');
+        }
     }
 }

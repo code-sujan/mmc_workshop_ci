@@ -28,8 +28,7 @@ class StudentController extends BaseController
             $studentList = $studentModel->findAll();
             return View('student/index', ['data' => $studentList]);
         } catch (\Exception $e) {
-            var_dump($e);
-            die;
+
         }
     }
 

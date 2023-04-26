@@ -21,6 +21,9 @@
                     <use xlink:href="<?= base_url('vendors/@coreui/icons/svg/free.svg#cil-user') ?>"></use>
                 </svg>
                 Student</a></li>
+        <li class="nav-item"><a class="nav-link" href="/faculty">
+                <i class="fa fa-list"></i> <span class="mx-2">Faculty</span></a>
+        </li>
 
     </ul>
     <button class="sidebar-toggler" type="button" data-coreui-toggle="unfoldable"></button>

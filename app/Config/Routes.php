@@ -33,8 +33,8 @@ $routes->get('/', 'Home::index');
 
 // $routes->get('/test', 'Test');
 
- $routes->resource('api/login', ['controller' => 'LoginController']);
- $routes->resource('api/user', ['controller' => 'Api\UserController']);
+// $routes->resource('api/login', ['controller' => 'LoginController']);
+// $routes->resource('api/user', ['controller' => 'Api\UserController']);
 
  $routes->get('/student', 'StudentController');
  $routes->get('/student/create', 'StudentController::create');
@@ -50,7 +50,11 @@ $routes->get('/', 'Home::index');
  $routes->get('/faculty/edit', 'FacultyController::edit');
  $routes->post('/faculty/edit', 'FacultyController::edit');
 $routes->get('/faculty/delete', 'FacultyController::delete');
-$routes->post('/faculty/delete', 'FacultyController::delete');
+
+$routes->get('/user/create', 'UserController::create');
+$routes->get('/user/login', 'UserController::login');
+$routes->post('/user/login', 'UserController::login');
+$routes->get('/user/logout', 'UserController::logout');
 
 /*
  * --------------------------------------------------------------------
