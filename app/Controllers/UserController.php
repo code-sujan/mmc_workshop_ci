@@ -4,7 +4,6 @@ namespace App\Controllers;
 
 use App\Entity\User;
 use App\Helpers\ClientNotification;
-use App\Models\StudentModel;
 use App\Models\UserModel;
 use App\Services\LoginService;
 use CodeIgniter\HTTP\RequestInterface;
