@@ -56,6 +56,11 @@ $routes->get('/user/login', 'UserController::login');
 $routes->post('/user/login', 'UserController::login');
 $routes->get('/user/logout', 'UserController::logout');
 
+
+$routes->get('/subject', 'SubjectController');
+$routes->get('/subject/new', 'SubjectController::new');
+$routes->post('/subject/new', 'SubjectController::new');
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing

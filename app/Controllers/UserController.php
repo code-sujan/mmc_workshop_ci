@@ -32,7 +32,8 @@ class UserController extends BaseController
         if(!$this->request->is('post')) return View('user/login');
         $data = $this->request->getPost();
         $userModel = new UserModel();
-        $user = $userModel->where('username', $data['username'])->orWhere('email', $data['username'])->first();
+        $user = $userModel->where('username', $data['username'])
+            ->orWhere('email', $data['username'])->first();
         if(!$user) throw new \Exception("Invalid username");
         $this->_loginService->Login($data['password'], $user);
         return redirect()->to('/');
