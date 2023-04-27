@@ -6,6 +6,6 @@ class Home extends BaseController
 {
     public function logout()
     {
-        return view('logout');
+        return view('/logout/logout');
     }
 }
